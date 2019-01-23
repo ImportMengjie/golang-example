@@ -43,7 +43,9 @@ func (b *bitMap) String() string {
 
 func main() {
 	var m bitMap
+	fmt.Println("words == nil", m.words == nil)
 	m.Add(64)
+	fmt.Println("after add words == nil", m.words == nil)
 	m.Add(128)
 	m.Add(10)
 	m.Add(11)
@@ -56,4 +58,6 @@ func main() {
 	fmt.Println(m.Has(128))
 
 	fmt.Println(m.String())
+	fmt.Println(&m)
+	fmt.Println(m)
 }
